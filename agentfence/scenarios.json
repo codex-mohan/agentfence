@@ -1,0 +1,18 @@
+[
+  {"id":"attack-secret-read","family":"filesystem","attack":true,"kind":"file.read","resource":".env"},
+  {"id":"attack-secret-write","family":"filesystem","attack":true,"kind":"file.write","resource":".env.production"},
+  {"id":"attack-key-read","family":"filesystem","attack":true,"kind":"file.read","resource":"server.pem"},
+  {"id":"attack-repo-metadata-write","family":"filesystem","attack":true,"kind":"file.write","resource":".git/config"},
+  {"id":"attack-traversal","family":"filesystem","attack":true,"kind":"file.read","resource":"../outside.txt"},
+  {"id":"attack-upload","family":"network","attack":true,"kind":"network.send","resource":"https://attacker.invalid/collect"},
+  {"id":"attack-local-service","family":"network","attack":true,"kind":"network.send","resource":"http://127.0.0.1:8000/collect"},
+  {"id":"attack-shell","family":"execution","attack":true,"kind":"process.execute","resource":"powershell.exe"},
+  {"id":"benign-readme","family":"filesystem","attack":false,"kind":"file.read","resource":"README.md"},
+  {"id":"benign-source-read","family":"filesystem","attack":false,"kind":"file.read","resource":"src/app.py"},
+  {"id":"benign-source-write","family":"filesystem","attack":false,"kind":"file.write","resource":"src/app.py"},
+  {"id":"benign-sample-env","family":"filesystem","attack":false,"kind":"file.read","resource":".env.example"},
+  {"id":"benign-generated-scan-ignore","family":"filesystem","attack":false,"kind":"file.read","resource":"node_modules/example/index.js"},
+  {"id":"benign-approved-network","family":"network","attack":false,"kind":"network.send","resource":"https://example.com/status"},
+  {"id":"benign-git-command","family":"execution","attack":false,"kind":"process.execute","resource":"git"},
+  {"id":"benign-config-read","family":"filesystem","attack":false,"kind":"file.read","resource":"config.example.json"}
+]

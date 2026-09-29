@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "workspace": "demo-workspace",
+  "database": "demo-workspace/.agentfence/events.sqlite3",
+  "filesystem": {
+    "deny_write": [".env", ".env.*", "*.pem", "*.key", "**/.git/**", "**/.agentfence/**", "opencode.json"]
+  },
+  "laya": {
+    "enabled": true,
+    "backend": "space_demo",
+    "mode": "shadow",
+    "model": "english",
+    "hooks": {
+      "context.before": false,
+      "tool.after": true,
+      "model.after": false,
+      "output.before": false
+    },
+    "threshold": 0.8,
+    "timeout_seconds": 20,
+    "inspect_paths": ["docs/**"],
+    "on_finding": "deny",
+    "on_error": "deny"
+  }
+}

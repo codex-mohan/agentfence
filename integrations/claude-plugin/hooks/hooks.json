@@ -1,0 +1,22 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {"hooks": [{"type": "command", "command": "python -m agentfence claude-hook"}]}
+    ],
+    "UserPromptSubmit": [
+      {"hooks": [{"type": "command", "command": "python -m agentfence claude-hook"}]}
+    ],
+    "PreToolUse": [
+      {"matcher": "*", "hooks": [{"type": "command", "command": "python -m agentfence claude-hook"}]}
+    ],
+    "PostToolUse": [
+      {"matcher": "*", "hooks": [{"type": "command", "command": "python -m agentfence claude-hook"}]}
+    ],
+    "Stop": [
+      {"hooks": [{"type": "command", "command": "python -m agentfence claude-hook"}]}
+    ],
+    "SessionEnd": [
+      {"hooks": [{"type": "command", "command": "python -m agentfence claude-hook"}]}
+    ]
+  }
+}

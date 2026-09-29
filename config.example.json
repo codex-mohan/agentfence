@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "workspace": ".",
+  "database": ".agentfence/events.sqlite3",
+  "filesystem": {
+    "read_roots": ["."],
+    "write_roots": ["."],
+    "deny_read": [".env", ".env.*", "*.pem", "*.key", "**/credentials/**", "**/.agentfence/**"],
+    "deny_write": [".env", ".env.*", "*.pem", "*.key", "**/.git/**", "**/.agentfence/**"],
+    "allow_read_exceptions": [".env.example"],
+    "allow_write_exceptions": [],
+    "scan_ignore": ["**/node_modules/**", "**/.git/**"],
+    "sensitive": [".env", ".env.*", "*.pem", "*.key", "**/credentials/**"]
+  },
+  "network": {"allowed_hosts": [], "allowed_schemes": ["https"], "allowed_ports": [443], "deny_private": true},
+  "execution": {"allowed_programs": [], "allowed_argv": [], "pass_env": ["PATH", "SystemRoot", "TEMP", "TMP", "USERPROFILE", "HOME"], "deny_shells": true, "timeout_seconds": 15},
+  "mcp": {"tool_rules": {}},
+  "session": {"max_actions": 100, "repeat_limit": 5, "deny_network_after_sensitive_read": true},
+  "laya": {
+    "enabled": false,
+    "mode": "shadow",
+    "model": "english",
+    "device": "auto",
+    "timeout_seconds": 3,
+    "max_chars": 12000,
+    "hooks": {"context.before": true, "tool.after": true, "model.after": false, "output.before": false},
+    "threshold": 0.85,
+    "on_finding": "require_approval",
+    "on_error": "require_approval"
+  }
+}

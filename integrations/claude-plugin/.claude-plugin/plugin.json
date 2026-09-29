@@ -1,0 +1,6 @@
+{
+  "name": "agentfence",
+  "description": "Apply AgentFence policy checks to Claude Code tool calls and record lifecycle activity.",
+  "version": "0.1.0",
+  "author": {"name": "AgentFence contributors"}
+}

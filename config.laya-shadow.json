@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "workspace": ".",
+  "database": ".agentfence/events.sqlite3",
+  "laya": {
+    "enabled": true,
+    "mode": "shadow",
+    "model": "english",
+    "device": "auto",
+    "timeout_seconds": 3,
+    "max_chars": 12000,
+    "hooks": {
+      "context.before": true,
+      "tool.after": true,
+      "model.after": false,
+      "output.before": false
+    },
+    "threshold": 0.85,
+    "on_finding": "require_approval",
+    "on_error": "require_approval"
+  }
+}

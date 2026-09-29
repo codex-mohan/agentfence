@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentfence"
+version = "0.1.0"
+description = "Lifecycle security middleware for AI agents"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+laya = ["laya==0.3.20"]
+test = ["pytest>=8"]
+
+[project.scripts]
+agentfence = "agentfence.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agentfence*", "examples*"]
+
+[tool.setuptools.package-data]
+agentfence = ["dashboard.html", "scenarios.json"]

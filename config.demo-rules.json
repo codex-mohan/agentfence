@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "workspace": "demo-workspace",
+  "database": "demo-workspace/.agentfence/events.sqlite3",
+  "filesystem": {
+    "deny_write": [".env", ".env.*", "*.pem", "*.key", "**/.git/**", "**/.agentfence/**", "opencode.json"]
+  }
+}
