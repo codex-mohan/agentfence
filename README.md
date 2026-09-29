@@ -15,7 +15,7 @@
 
 AgentFence sits at agent lifecycle hooks and returns a decision before a mapped action executes or before untrusted tool output reaches the model. It combines deterministic controls for files, network destinations, commands, and session behavior with an optional [Laya](https://github.com/NandhaKishorM/laya) semantic signal. Every decision is recorded for the local dashboard. The live demo uses a **real OpenCode run**, not a replay or static mockup.
 
-For a full explanation of the problem, architecture, implementation, results, and limitations, read the [capstone project report](REPORT.md).
+For a full explanation of the problem, architecture, implementation, results, and limitations, read the [capstone project report](REPORT.md), or download the [editable Word version](docs/AgentFence_Project_Report.docx) and [print-ready PDF](docs/AgentFence_Project_Report.pdf).
 
 ## Run the live demo
 
